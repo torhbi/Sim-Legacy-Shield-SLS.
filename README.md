@@ -24,3 +24,17 @@
 ‎
 ‎     IT Administration (Lead: @OdusinaDamilare): Mapping the USSD gateway and telecom API integrations.
 ‎   Security Research: Identifying common Financial Ghost patterns in recycled numbers.
+
+‎ ⚖️ Regulatory Alignment & Compliance
+‎
+‎TIRMS vs SLS: A Complementary Ecosystem
+‎In March 2026, the NCC launched the  Telecoms Identity Risk Management System (TIRMS) to protect the Nigerian telecommunications space from identity theft and fraudulent SIM recycling .
+‎ 🏛️ TIRMS protects the system: It provides a backend synchronization layer for Mobile Network Operators (MNOs) and Financial Institutions.
+‎ 🛡️ SLS protects the user: It provides a consumer facing USSD interface, allowing the everyday Nigerian to perform a Pre Linkage Audit before committing their BVN to a recycled MSISDN.
+‎
+‎    Data Privacy & Legal Guardrails (NDPR/NDPA)
+‎SIM Legacy Shield is built with a Privacy by Design philosophy to ensure full compliance with Nigerian laws:
+‎   Zero Storage Policy: SLS does not store sensitive PII (Personally Identifiable Information) such as full BVN or NIN digits.
+‎   Consent Based Auditing: No SIM audit is triggered without explicit user authorization via the USSD interface.
+‎   Transparency: Risk scores (🟢/🟡/🔴) are generated based on metadata and header patterns, not by "hacking" private databases.
+‎   Rule of Law: The Emergency Brake feature acts as a Policy Recommendation, providing users with verifiable evidence to use in official bank appeal processes.
