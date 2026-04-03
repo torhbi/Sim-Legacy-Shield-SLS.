@@ -49,8 +49,7 @@ User Safety & Logic (Grandma-Proofing)
 ‎
 ‎    User Safety & Logic (Grandma-Proofing)
 ‎To ensure SIM Legacy Shield (SLS) remains accessible and safe for non tech savvy Nigerians, the following Safety are required in the USSD/API logic:
-‎
-‎    Double Confirmation for Critical Actions: Any action that alters a SIM to BVN link must require a two digit confirmation (e.g, "Press 55 to confirm") to prevent accidental pocket dialing or mindless clicking.
+‎Double Confirmation for Critical Actions: Any action that alters a SIM to BVN link must require a two digit confirmation (e.g, "Press 55 to confirm") to prevent accidental pocket dialing or mindless clicking.
 ‎    Universal Exit (The '0' Rule): Every single USSD screen must include a "Press 0 to Cancel" option to ensure the user never feels trapped in a process.
 ‎    Session Persistence & Auto Revert: If a session times out or a phone loses signal mid process, the system must auto revert to the last Safe State to prevent partial or hanging identity updates.
 ‎   Language Accessibility:The logic should support Pidgin and local language prompts like Yoruba, Igbo, Hausa to ensure the May 2026 BVN deadline information is clear to all demographics.
