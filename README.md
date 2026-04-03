@@ -63,9 +63,9 @@ Current Phase: Decentralized Validation (Plan B Strategy)
 
 ‎  To ensure SLS remains functional regardless of official API timelines, we are implementing a "Bottom Up" Risk Framework:
 ‎ 
-‎      Community Intelligence Network: Enabling users and local agents to report "identity ghosts" on recycled SIMs.
-‎      Risk Scoring Heuristics: Building internal logic to flag high risk linkages based on SIM age and CBN Once in a Lifetime policy triggers.
-‎      Fintech Trust Signals: Leveraging anonymized verification patterns from private sector partners to confirm identity health.
+‎   Community Intelligence Network: Enabling users and local agents to report "identity ghosts" on recycled SIMs.
+‎   Risk Scoring Heuristics: Building internal logic to flag high risk linkages based on SIM age and CBN Once in a Lifetime policy triggers.
+‎   Fintech Trust Signals: Leveraging anonymized verification patterns from private sector partners to confirm identity health.
 ‎
 
     Project Vision & Sustainability
