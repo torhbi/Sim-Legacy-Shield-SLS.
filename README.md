@@ -19,7 +19,7 @@
 ‎
 ‎1.  SIM Acquisition: User buys and registers a new SIM.
 ‎2.  Activation: SIM is verified via NIN and becomes active.
-‎3.  ⚠️ The SLS Audit: Before linking the BVN, the user dials a USSD code (e.g, *7006#).
+‎3.  ⚠️ The SLS Identity Verification: Before linking the BVN, the user dials a USSD code (e.g, *7006#).
 ‎4. Verification Engine: SLS queries the Zero-PII Ledger for historical flags and prompts the user for  Self-Declared Signals (e.g, Do you receive bank alerts for a stranger?).
 ‎5. Risk Scoring: Our Heuristic Engine applies weights (+1 for User reports, +5 for Agent flags) to generate a Confidence Rated Status: 🟢 Safe, 🟡 Caution, or 🔴 High Risk.
 ‎6. Decision: User chooses to link their BVN or discard the compromised SIM.
