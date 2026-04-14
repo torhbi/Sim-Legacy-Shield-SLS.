@@ -35,7 +35,7 @@
 
 ‎ ⚖️ Regulatory Alignment & Compliance
 ‎
-‎TIRMS vs SLS: A Complementary Ecosystem
+TIRMS & SLS: A collaborative security Model.
 ‎In March 2026, the NCC launched the  Telecoms Identity Risk Management System (TIRMS) to protect the Nigerian telecommunications space from identity theft and fraudulent SIM recycling .
 ‎ 🏛️ TIRMS protects the system: It provides a backend synchronization layer for Mobile Network Operators (MNOs) and Financial Institutions.
 ‎ 🛡️ SLS protects the user: It provides a consumer facing USSD interface, allowing the everyday Nigerian to perform a Pre Linkage Identity Verification before committing their BVN to a recycled MSISDN.
