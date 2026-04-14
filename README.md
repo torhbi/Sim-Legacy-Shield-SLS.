@@ -44,7 +44,7 @@
 
 ‎SIM Legacy Shield is built with a Privacy by Design philosophy to ensure full compliance with Nigerian laws:
 ‎   Zero-PII Ledger Policy: SLS does not store names, BVNs, or phone numbers. We store SHA-256 Anonymized Hashes. This allows us to recognize a "Ghost SIM" across different users without ever knowing the actual identity of the person holding it. 
-‎   Consent Based Auditing: No SIM audit is triggered without explicit user authorization via the USSD interface.
+‎   Consent Based Identity Verification : No SIM Identity Verification is triggered without explicit user authorization via the USSD interface.
 ‎   Transparency: Risk scores (🟢/🟡/🔴) are generated based on metadata and header patterns, not by "hacking" private databases.
 
 ⚖️ Regulatory Support & The Identity Safeguard
@@ -68,7 +68,7 @@ User Safety & Logic (Grandma-Proofing)
 
 Current Phase: Decentralized Validation (Plan B Strategy)
 
-‎  To ensure SLS remains functional regardless of official API timelines, we are implementing a "Bottom Up" Risk Framework:
+‎  To ensure SLS remains functional regardless of official API timelines, we are implementing a Community Assisted Validation model to provide real time risk intelligence.
 ‎
 
 ‎   Community Intelligence Network: Enabling users and local agents to report "identity ghosts" on recycled SIMs.
