@@ -1,96 +1,161 @@
  SIM Legacy Shield (SLS) 🛡️🇳🇬
- 
-‎🚀 Current Sprint (April 2026)
 
- [In Progress] API Research: Investigating NIBSS/TIRMS endpoints for SIM-to-BVN verification (@Odusina).
-‎[New] Architecture: Finalized the 6step "Grandma-Proof" USSD flow and Risk Scoring heuristics.
-‎[Goal] Integration of SHA-256 hashing for Zero-PII data storage.
+ 🚧 Project Status
+SLS is currently in early stage development (architecture & validation phase).
 
-‎
-‎    The Identity Status Verification Framework for Nigeria's Single Linkage BVN Policy 
-‎
-‎       Executive Summary
-‎
-‎Starting May 1, 2026, the CBN has restricted BVN phone changes to once in a lifetime. SLS is a proactive risk mitigation framework designed to verify the status of recycled Sim cards for financial ghosts before they are permanently bonded to a user's digital identity.
-‎
-‎  The Solution: 6 Step Grandma Friendly Workflow.
-‎
-‎We prioritize accessibility using USSD to ensure the tool works without data or smartphones.
-‎
-‎1.  SIM Acquisition: User buys and registers a new SIM.
-‎2.  Activation: SIM is verified via NIN and becomes active.
-‎3.  ⚠️ The SLS Identity Verification: Before linking the BVN, the user dials a USSD code (e.g, *7006#).
-‎4. Verification Engine: SLS queries the Zero-PII Ledger for historical flags and prompts the user for  Self-Declared Signals (e.g, Do you receive bank alerts for a stranger?).
-‎5. Risk Scoring: Our Heuristic Engine applies weights (+1 for User reports, +5 for Agent flags) to generate a Confidence Rated Status: 🟢 Safe, 🟡 Caution, or 🔴 High Risk.
-‎6. Decision: User chooses to link their BVN or discard the compromised SIM.
-‎
-‎  Technical Collaboration (Open Roles)
-‎
-‎     🏗️ System Architecture (The 5 Pillars)
-‎USSD Gateway: Entry point for Grandma-Proof accessibility.
-‎API Server: The Brain routing signals between the user and the ledger.
-‎Risk Engine: Logic center that calculates scores and confidence levels.
-‎Signal Ledger (Hashed): A SHA-256 anonymized database of identity ghosts.
-‎Agent Dashboard: A verification portal for 3MTT Agents to validate high risk flags.
+This repository contains the core concept, system design, and planned implementation.
 
-‎ ⚖️ Regulatory Alignment & Compliance
-‎
-TIRMS & SLS: A collaborative security Model.
-‎In March 2026, the NCC launched the  Telecoms Identity Risk Management System (TIRMS) to protect the Nigerian telecommunications space from identity theft and fraudulent SIM recycling .
-‎ 🏛️ TIRMS protects the system: It provides a backend synchronization layer for Mobile Network Operators (MNOs) and Financial Institutions.
-‎ 🛡️ SLS protects the user: It provides a consumer facing USSD interface, allowing the everyday Nigerian to perform a Pre Linkage Identity Verification before committing their BVN to a recycled MSISDN.
-‎
-‎    Data Privacy & Legal Guardrails (NDPR/NDPA)
-
-‎SIM Legacy Shield is built with a Privacy by Design philosophy to ensure full compliance with Nigerian laws:
-‎   Zero-PII Ledger Policy: SLS does not store names, BVNs, or phone numbers. We store SHA-256 Anonymized Hashes. This allows us to recognize a "Ghost SIM" across different users without ever knowing the actual identity of the person holding it. 
-‎   Consent Based Identity Verification : No SIM Identity Verification is triggered without explicit user authorization via the USSD interface.
-‎   Transparency: Risk scores (🟢/🟡/🔴) are generated based on metadata and header patterns, not by "hacking" private databases.
-
-⚖️ Regulatory Support & The Identity Safeguard
-‎The Identity Safeguard acts as a  Decision Support & Evidence Generator. If a SIM is flagged 🔴 High Risk, SLS generates a unique Verification Reference Code. This allows the user to present documented findings of a "Recycled SIM Conflict" to their financial institution. This transparency helps bank officials verify the legitimacy of an appeal for a BVN linkage correction, ensuring the "Once in a Lifetime" policy remains effective while protecting innocent consumers from recycled identity errors.
-
-User Safety & Logic (Grandma-Proofing)
-
-‎To ensure SIM Legacy Shield (SLS) remains accessible and safe for non tech savvy Nigerians, the following Safety are required in the USSD/API logic:
-‎
-‎    User Safety & Logic (Grandma-Proofing)
-‎To ensure SIM Legacy Shield (SLS) remains accessible and safe for non tech savvy Nigerians, the following Safety are required in the USSD/API logic:
-
-‎Double Confirmation for Critical Actions: Any action that alters a SIM to BVN link must require a two digit confirmation (e.g, "Press 55 to confirm") to prevent accidental pocket dialing or mindless clicking.
-
-‎    Universal Exit (The '0' Rule): Every single USSD screen must include a "Press 0 to Cancel" option to ensure the user never feels trapped in a process.
-
-‎    Session Persistence & Auto Revert: If a session times out or a phone loses signal mid process, the system must auto revert to the last Safe State to prevent partial or hanging identity updates.
-
-‎   Language Accessibility:The logic should support Pidgin and local language prompts like Yoruba, Igbo, Hausa to ensure the May 2026 BVN deadline information is clear to all demographics.
+Contributions, feedback, and collaborations are welcome.
 
 
-Current Phase: Decentralized Validation (Plan B Strategy)
 
-‎  To ensure SLS remains functional regardless of official API timelines, we are implementing a Community Assisted Validation model to provide real time risk intelligence.
-‎
+ ⚡ What is SLS?
+SIM Legacy Shield (SLS) is a USSD based identity verification tool designed to help Nigerians detect risks associated with recycled SIM cards before linking them to their BVN.
 
-‎   Community Intelligence Network: Enabling users and local agents to report "identity ghosts" on recycled SIMs.
+It acts as a safety check between SIM activation and BVN linkage, helping users avoid permanent identity conflicts under the one-time linkage policy.
 
-‎   Risk Scoring Heuristics: Building internal logic to flag high risk linkages based on SIM age and CBN Once in a Lifetime policy triggers.
 
-‎   Fintech Trust Signals: Leveraging anonymized verification patterns from private sector partners to confirm identity health.
+ 🎯 Why This Matters
+From May 2026, BVN phone number changes are restricted. This creates a serious risk when recycled SIM cards still carry traces of a previous owner’s financial identity.
 
-‎ 🛡️ Anti-Abuse & Trust Layer
+SLS helps prevent:
+ Identity collision
+ Accidental linkage to another person’s financial history
+ Permanent BVN linkage errors
 
-‎ To prevent malicious flagging, we use Signal Weighting:
-‎Standard User Report: +1 Weight.
-‎Verified 3MTT Agent Report: +5 Weight (Gold Standard).
-‎System Threshold: A score of 6+ is required to generate 🔴 a high Risk identity safeguard status.
-‎
 
-    Project Vision & Sustainability
-    
-‎SIM Legacy Shield (SLS) is a social impact solution designed to bridge the digital divide created by the May 2026 BVN deadline.
-‎
-‎    B2B Licensing: We aim to provide Telcos and Financial Institutions with "Safety Rail" logic to reduce customer churn and identity errors during national policy shifts.
 
-‎    Public Sector Utility: Positioning as a third party framework to assist the NCC/NIMC in protecting vulnerable demographics during the 2026 transition.
-‎  
-     Scalability: The logic is designed to be modular and adaptable for future national identity audits or SIM linkage updates beyond 2026.
+ 🧠 How It Works (Simple Flow)
+Dial → Check → Score → Decide
+
+1. User buys and activates a SIM  
+2. Before linking BVN, user dials a USSD code (e.g. *7006#)  
+3. SLS runs a verification check  
+4. Risk score is generated:  
+   - 🟢 Safe  
+   - 🟡 Caution  
+   - 🔴 High Risk  
+5. User decides to proceed or discard the SIM  
+
+
+
+ 👵 Real-Life Scenario
+A woman buys a recycled SIM.
+
+After activation, she starts receiving bank alerts meant for someone else.
+
+Before linking her BVN, she dials *7006#.
+
+SLS flags the SIM as 🔴 High Risk.
+
+She avoids linking her identity to a compromised number.
+
+
+
+ 🏗️ System Architecture
+
+User → USSD Gateway → API Server → Risk Engine → Signal Ledger  
+                                      ↓  
+                               Agent Dashboard  
+
+ Core Components
+ USSD Gateway: Entry point for all users (no internet required)  
+ API Server: Handles requests and routes data  
+ Risk Engine: Calculates risk scores using defined rules  
+ Signal Ledger: Stores anonymized patterns  
+ Agent Dashboard: Used by verified agents for validation  
+
+
+
+ 🔐 Privacy & Data Protection
+SLS is built with a strict privacy-first approach.
+
+  What we DO NOT store:
+- Phone numbers  
+- BVN  
+- NIN  
+- Names or personal identity data  
+
+  What we store:
+- Anonymized signal patterns  
+- Non-identifiable activity fingerprints  
+- Risk-related metadata  
+
+All stored data is hashed using SHA-256.
+
+---
+
+ ⚖️ Identity Safeguard (Evidence Support)
+If a SIM is flagged as 🔴 High Risk, SLS generates a Verification Reference Code.
+
+This code can be presented at a bank as supporting evidence of a recycled SIM issue.
+
+It helps:
+- Support legitimate user complaints  
+- Reduce wrongful BVN linkage restrictions  
+- Improve transparency during dispute resolution  
+
+
+
+ 🛡️ Anti-Abuse & Trust System
+To prevent false reporting and misuse:
+
+- Standard user report: +1 weight  
+- Verified agent report: +5 weight  
+- High-risk threshold: 6+  
+
+Only strong, consistent signals trigger a 🔴 High Risk status.
+
+
+
+ 🌍 Accessibility (Grandma-Proof Design)
+The system is designed for everyday users, including non-technical individuals.
+
+Key protections:
+- Double confirmation for critical actions  
+- "Press 0 to cancel" on every screen  
+- Session auto-revert on timeout  
+- Support for local languages (Pidgin, Yoruba, Hausa, Igbo)  
+
+
+
+ 🔄 Current Approach (Independent Operation)
+SLS is designed to function independently of restricted or private infrastructure.
+
+It operates as a user-driven verification layer using:
+- Community reporting  
+- Agent validation  
+- Internal risk scoring logic  
+
+
+
+ 🛠️ Getting Started
+
+ Planned Stack
+- Backend: Node.js or Python  
+- USSD Integration: Africa’s Talking / Termii  
+- Database: PostgreSQL / Redis  
+
+ Status
+Early-stage development (architecture and validation phase)
+
+ Open Roles
+- Backend Developers  
+- USSD Engineers  
+- Security Researchers  
+- Product Designers  
+
+
+
+ 🚀 Vision
+SIM Legacy Shield is built as a public-interest solution to protect Nigerians during identity transitions.
+
+Future direction:
+- Partnerships with telecom operators  
+- Integration with financial institutions  
+- Expansion into broader identity risk auditing  
+
+
+
+ 📜 License
+MIT License ‎    
